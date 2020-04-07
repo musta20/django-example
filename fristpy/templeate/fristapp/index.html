@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+    <meta charset="utf-8">
+    <head>hi iam silly
+    </head>
+    <link rel="stylesheet" href="{% static "css/css.css" %}">
+
+
+    <body>
+        <h1>this is imge from ديجانقو him self {{text|upper}} <p></p>{{ number|add:"99" }}</h1>
+
+        <h1>
+            here is your  data
+        </h1>
+        {% if access_rec %}
+
+        <table>
+            <thead>
+                <th>
+                    site name
+                </th>
+                <th>
+                    Date acess
+                </th>
+            </thead>
+            {% for acc in access_rec %}
+            <tr>
+                <td>
+                    {{ acc.name }}
+                </td>
+                <td>
+                    {{ acc.date }}
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+        {% else %}
+        <p>NO ACCESS RECORD FOUND</p>
+        {% endif %}
+      
+    </body>
+
+
+</html>

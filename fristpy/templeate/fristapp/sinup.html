@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "fristapp/header.html"%}
+{% block body_block %}
+<div>
+{% if sineduo %}
+<h1>thanks for registring</h1>
+{% else %}
+
+<h1>sinup herer </h1>
+<h3>fill out the form:</h3>
+<form method="POST" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ UserForm.as_p }}
+
+    {{ UserProfileInfoForm.as_p }}
+
+    <input type="submit" value="sinup"  />
+
+</form>
+{% endif %}
+</div>
+
+{% endblock %}

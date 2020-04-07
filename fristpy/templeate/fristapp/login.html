@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "fristapp/header.html"%}
+{% block body_block %}
+<div>
+<h1>pleas login </h1>
+<form method="post" action="{% url 'fristpy_app:login' %}" >
+    {% csrf_token %}
+    <label for="username">user name</label>
+    <input type="text" name="username" placeholder="Enter your username" >
+    <label for="password">password</label>
+    <input type="password" name="password" placeholder="Enter your password" >
+
+    <input type="submit" value="login" >
+</form>
+</div>
+
+{% endblock %}

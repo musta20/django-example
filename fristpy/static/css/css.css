@@ -1,0 +1,14 @@
+
+
+h1{
+    color: red;
+
+}
+
+table,thead,td,tr{
+    border: 1px solid black;
+}
+
+thead{
+    background-color: #f1f1f1;
+}
